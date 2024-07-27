@@ -22,23 +22,49 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   // rect(30 ,30, rect_width, rect_height);
 
 
-let FlowerPetalOne =(1);
+//Flower Stem MAIN
 noFill();
-stroke(1);
-strokeWeight(FlowerPetalOne);
-//Flower One Petal
+strokeWeight(0.5)
+//Start
 beginShape();
-//First Control Point
-curveVertex(75, 50);
-curveVertex(50, 91);
+//Control Point
+curveVertex(110, 180);
+curveVertex(110, 180);
+//Anchor Point
+curveVertex(102, 160);
+curveVertex(85, 120);
+curveVertex(100, 50);
+//Control point
+curveVertex(100, 10);
+endShape();
+
+//Flower stem LEFT
+noFill();
+strokeWeight(0.5);
+//Start
+beginShape();
+//Control point
+curveVertex(85, 120);
+curveVertex(85, 120);
 //Anchor points
-curveVertex(10, 60);
-curveVertex(21, 17);
-curveVertex(68, 19);
-curveVertex(75, 50);
-//Second Control Point
-curveVertex(50,91); //where it finishes
-curveVertex(10,60); //make it the same number as the first point for roundness
-//Stop drawing shape
+curveVertex(55, 70);
+//Control Point
+curveVertex(10, 120);
+//End
+endShape();
+
+//Flower Stem Right Down
+noFill();
+strokeWeight(0.5);
+//Start
+beginShape();
+//Control
+curveVertex(102, 160);
+curveVertex(102, 160);
+//Anchor
+curveVertex(110, 140);
+//Control
+curveVertex(135, 130);
 endShape();
 }
+
