@@ -21,10 +21,13 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   // rect(30 ,30, rect_width, rect_height);
 
+fill(1)
+  circle(55,70,5)
 
-//Flower Stem MAIN
+
+  //Flower Stem MAIN
 noFill();
-strokeWeight(0.5)
+strokeWeight(1)
 //Start
 beginShape();
 //Control Point
@@ -40,7 +43,7 @@ endShape();
 
 //Flower stem LEFT
 noFill();
-strokeWeight(0.5);
+strokeWeight(1);
 //Start
 beginShape();
 //Control point
@@ -55,7 +58,7 @@ endShape();
 
 //Flower Stem Right Down
 noFill();
-strokeWeight(0.5);
+strokeWeight(1);
 //Start
 beginShape();
 //Control
@@ -67,12 +70,11 @@ curveVertex(110, 140);
 curveVertex(135, 130);
 endShape();
 
-ellipse(80, 120, 10, 5)
-line(75, 120, 85, 120)
-
 //Left Flower Petal One
+line(45,80,55,70)
+
 noFill();
-strokeWeight(0.5)
+strokeWeight(1)
 //Start
 beginShape();
 //Control Point
@@ -89,8 +91,10 @@ curveVertex(50,85)
 endShape();
 
 //Left Flower Petal Two
+line(53,56,55,70)
+
 noFill();
-strokeWeight(0.5)
+strokeWeight(1)
 //Start
 beginShape();
 //Control Point
@@ -106,20 +110,67 @@ curveVertex(45,60)
 endShape();
 
 //Left Flower Petal Three
+line(70,65,55,70)
+
 noFill();
-strokeWeight(0.5)
+strokeWeight(1)
 //Start
 beginShape();
 //Control Point
 curveVertex(55,70);
 curveVertex(55,70);
 //Anchor Points
-curveVertex(60,60);
-curveVertex(55,60);
+curveVertex(75,70);
+curveVertex(70,65)
+curveVertex(65,60);
+curveVertex(55,70);
 //Control
-curveVertex(60,60);
-//
+curveVertex(70,60);
+//End
 endShape();
+
+//Left Flower Petal Four
+line(36,64,55,70)
+
+noFill();
+strokeWeight(1)
+//Start
+beginShape();
+//Control Point
+curveVertex(55,70);
+curveVertex(55,70);
+//Anchor Points
+curveVertex(40,60)
+curveVertex(35,70)
+curveVertex(55,70)
+//Control point
+curveVertex(55,70)
+endShape();
+
+//Left Flower Petal Five
+line(62,84,55,70)
+
+noFill();
+strokeWeight(1)
+//Start
+beginShape();
+//Control Point
+curveVertex(55,70);
+curveVertex(55,70);
+//Anchor Points
+curveVertex(54,80);
+curveVertex(56,84);
+curveVertex(66,82);
+curveVertex(57,69);
+//Control Point
+curveVertex(55,70)
+//End
+endShape();
+
+//TOP Flower
+
+
+
 }
 
 
