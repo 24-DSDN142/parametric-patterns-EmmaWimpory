@@ -66,5 +66,60 @@ curveVertex(110, 140);
 //Control
 curveVertex(135, 130);
 endShape();
+
+ellipse(80, 120, 10, 5)
+line(75, 120, 85, 120)
+
+//Left Flower Petal One
+noFill();
+strokeWeight(0.5)
+//Start
+beginShape();
+//Control Point
+curveVertex(55, 70);
+curveVertex(55,70);
+//Anchor Points
+curveVertex(50, 85)
+curveVertex(45, 80)
+curveVertex(40,75)
+curveVertex(55,70)
+//Control
+curveVertex(50,85)
+//
+endShape();
+
+//Left Flower Petal Two
+noFill();
+strokeWeight(0.5)
+//Start
+beginShape();
+//Control Point
+curveVertex(55,70);
+curveVertex(55,70);
+//Anchor
+curveVertex(45,60);
+curveVertex(60,55);
+curveVertex(55,70);
+//Control Point
+curveVertex(45,60)
+//End
+endShape();
+
+//Left Flower Petal Three
+noFill();
+strokeWeight(0.5)
+//Start
+beginShape();
+//Control Point
+curveVertex(55,70);
+curveVertex(55,70);
+//Anchor Points
+curveVertex(60,60);
+curveVertex(55,60);
+//Control
+curveVertex(60,60);
+//
+endShape();
 }
+
 
