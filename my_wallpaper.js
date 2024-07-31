@@ -167,7 +167,135 @@ curveVertex(55,70)
 //End
 endShape();
 
-//TOP Flower
+//TOP Flower Petal One
+fill(1)
+circle(100,50,8)
+
+line(71,45,100,50)
+
+noFill();
+strokeWeight(1)
+//Start
+beginShape();
+//Control Point
+curveVertex(100,50);
+curveVertex(100,50);
+//Anchor Point
+curveVertex(78,35)
+curveVertex(70,40)
+curveVertex(75,55)
+curveVertex(100,50)
+//Control Point
+curveVertex(100,50)
+//End
+endShape();
+
+
+//Top Flower Petal Two
+line(92,20,100,50)
+
+noFill();
+strokeWeight(1);
+//Start
+beginShape();
+//Control Point
+curveVertex(100,50);
+curveVertex(100,50);
+//Anchor Points
+curveVertex(80,25)
+curveVertex(95,20)
+curveVertex(100,27)
+curveVertex(104,25)
+curveVertex(108,30)
+curveVertex(100,50)
+//Control
+curveVertex(100,50)
+//End
+endShape();
+
+//Top Flower Petal Three
+line(100,50,128,35)
+
+noFill();
+strokeWeight(1);
+//Start
+beginShape();
+//Control Point
+curveVertex(100,50);
+curveVertex(100,50);
+//Anchor Points
+curveVertex(115,25)
+curveVertex(125,30)
+curveVertex(130,45)
+curveVertex(100,50)
+//Control
+curveVertex(115,25)
+//End
+endShape();
+
+//Top Flower Petal Four
+line(100,50,110,70)
+
+noFill();
+strokeWeight(1);
+//Start
+beginShape();
+//Control Point
+curveVertex(100,50);
+curveVertex(100,50);
+//Anchor Point
+curveVertex(100,75)
+curveVertex(110,70)
+curveVertex(120,70)
+curveVertex(120,60)
+curveVertex(100,50)
+//Control Point
+curveVertex(100,50)
+//End
+endShape();
+
+//Top Flower Petal Five
+line(80,66,100,50)
+
+noFill();
+strokeWeight(1);
+//Start
+beginShape();
+//Control Point
+curveVertex(100,50);
+curveVertex(100,50);
+//Anchor Point
+curveVertex(91,75)
+curveVertex(85,70)
+curveVertex(75,60)
+curveVertex(100,50)
+//Control
+curveVertex(100,50)
+//End
+endShape();
+
+//Bottom FLower Petal One
+
+noFill();
+strokeWeight(1);
+//Start
+beginShape();
+//Control Point
+curveVertex(110, 140);
+curveVertex(110,140);
+//Anchor
+curveVertex(120,146);
+curveVertex(125,140);
+curveVertex(110,140)
+//Control
+curveVertex(110,140);
+//End
+endShape();
+
+
+
+//Leaf One
+
 
 
 
