@@ -292,8 +292,57 @@ curveVertex(110,140);
 //End
 endShape();
 
+//Bottom Flower Petal Two
+noFill();
+strokeWeight(1);
+//Start
+beginShape();
+//Control Point
+curveVertex(110, 140);
+curveVertex(110,140);
+//Anchor Point
+curveVertex(100, 130);
+curveVertex(108,130);
+curveVertex(110,140);
+//Control Point
+curveVertex(110,140)
+//End
+endShape();
 
+//Bottom FLower Petal Three
+noFill();
+strokeWeight(1);
+//Start
+beginShape();
+//Control Point
+curveVertex(110,140);
+curveVertex(110,140);
+//Anchor Point
+curveVertex(123,130)
+curveVertex(126,137)
+curveVertex(110,140)
+//Control Point
+curveVertex(110,140);
+curveVertex(110,140);
+//End
+endShape();
 
+//Bottom Flower Petal Four
+noFill();
+strokeWeight(1);
+//Start
+beginShape();
+//Control Point
+curveVertex(110,140);
+curveVertex(110,140);
+//Anchor Point
+curveVertex(110,125);
+curveVertex(119,130);
+curveVertex(110,140);
+//Control Point
+curveVertex(110,140)
+//End
+endShape();
 //Leaf One
 
 
