@@ -1,21 +1,26 @@
 //your parameter variables go here!
 let rect_width  = 20;
 let rect_height = 20;
-
+let CircleOutline = 0
+let FlowerGone = 1//(1) 0 to remove
+let FlowerStem =1//1
+let FlowerPetals = 1.4//1.4
+let LeafThick =1 //1
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.output_mode(GRID_WALLPAPER
+  )
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
 
 function wallpaper_background() {
-  background(255, 250, 247); //light honeydew green colour
+  background(255, 254, 250); //light honeydew green colour
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -23,114 +28,109 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 
   //Background Circles
-strokeWeight(0);
-fill(255, 138, 224,100)
+strokeWeight(CircleOutline);
+fill(255, 156, 224,110)
 circle(130,50,90)
 
-strokeWeight(0)
-fill(207, 110, 255,100)
-circle(160,90,77)
+strokeWeight(CircleOutline)
+fill(215, 97, 255,120)
+circle(155,93,85)
 
-//Green Background Circle
+strokeWeight(CircleOutline);
+fill(113, 194, 62,90);
+circle(50,130,80,100)
 
 
-
-
-fill(1)
-  circle(55,70,5)
-
-//Butterflies
-//Start
+butterfly();
+function butterfly() {
 stroke(1)
 strokeWeight(2)
 beginShape();
 //Control Point
 curveVertex(160,120);
 //Anchor Point
-curveVertex(154,97)
-curveVertex(164,118)
+curveVertex(154,97);
+curveVertex(164,118);
 //Control Point
-curveVertex(150,97)
+curveVertex(150,97);
+//End
+endShape();
+//Start
+strokeWeight(0.5);
+fill(1);
+beginShape();
+//Control Point
+curveVertex(163,113);
+//Anchor Point
+curveVertex(158,102.5);
+curveVertex(180,90);
+curveVertex(175,107);
+curveVertex(170,108);
+curveVertex(178,110);
+curveVertex(180,120);
+curveVertex(163,113);
+//Control Point
+curveVertex(159,102.5);
 //End
 endShape();
 
 //Start
-strokeWeight(0.5)
-noFill(255, 250, 247, 255)
+stroke(1);
+strokeWeight(0.5);
+fill(1);
 beginShape();
+
 //Control Point
-curveVertex(163,113)
+curveVertex(145,78);
 //Anchor Point
-curveVertex(158,102.5)
-curveVertex(180,90)
-curveVertex(175,107)
-curveVertex(170,108)
-curveVertex(178,110)
-curveVertex(180,120)
-curveVertex(163,113)
+curveVertex(146.5,67);
+curveVertex(145,67);
+curveVertex(158,60);
+curveVertex(159,70);
+curveVertex(152,75);
+curveVertex(159,75);
+curveVertex(158,84);
+curveVertex(145,78);
 //Control Point
-curveVertex(159,102.5)
+curveVertex(144,67);
 //End
 endShape();
-
-//Start
-stroke(1)
-strokeWeight(0.5)
-noFill(255, 250, 247, 255)
+strokeWeight(0.5);
+fill(1);
 beginShape();
-//Control Point
-curveVertex(145,78)
-//Anchor Point
-curveVertex(146.5,67)
-curveVertex(145,67)
-curveVertex(158,60)
-curveVertex(159,70)
-curveVertex(152,75)
-curveVertex(159,75)
-curveVertex(158,84)
-curveVertex(145,78)
-//Control Point
-curveVertex(144,67)
-//End
-endShape();
 
-
-strokeWeight(0.5)
-noFill(255, 250, 247, 255)
-beginShape();
 //Control Point
-curveVertex(145,78)
+curveVertex(145,78);
 //Anchor
 curveVertex(145,67);
 curveVertex(133,60);
 curveVertex(132,70);
 curveVertex(139,75);
-curveVertex(132,75)
+curveVertex(132,75);
 curveVertex(133,84);
 curveVertex(145,78);
 //Control Point
-curveVertex(145,67)
+curveVertex(145,67);
 //End
 endShape();
-
-fill(1)
-ellipse(145.5,73,2,20)
-
+fill(1);
+ellipse(145.5,73,2,20);
+}
 
 flowers();
 Leaf(1, 0, 0)
 Leaf(2, 0, 0)
-
-
 }
 
 function flowers(){
     //Flower Stem MAIN
   stroke(1)
   noFill();
-  strokeWeight(1)
+  strokeWeight(FlowerStem)
   //Start
   beginShape();
+      scale(FlowerGone)
+
   //Control Point
   curveVertex(110, 180);
   curveVertex(110, 180);
@@ -144,7 +144,7 @@ function flowers(){
   
   //Flower stem LEFT
   noFill();
-  strokeWeight(1);
+  strokeWeight(FlowerStem);
   //Start
   beginShape();
   //Control point
@@ -159,7 +159,7 @@ function flowers(){
   
   //Flower Stem Right Down
   noFill(0);
-  strokeWeight(1);
+  strokeWeight(FlowerStem);
   //Start
   beginShape();
   //Control
@@ -173,11 +173,13 @@ function flowers(){
   
   //Left Flower Petal One
   fill(1)
-ellipse(145.5,73,2,20)
+  circle(55,70,5)
+
+  fill(1)
   line(45,80,55,70)
   
   noFill();
-  strokeWeight(1)
+  strokeWeight(FlowerPetals)
   //Start
   beginShape();
   //Control Point
@@ -197,7 +199,7 @@ ellipse(145.5,73,2,20)
   line(53,56,55,70)
   
   noFill();
-  strokeWeight(1)
+  strokeWeight(FlowerPetals)
   //Start
   beginShape();
   //Control Point
@@ -216,7 +218,7 @@ ellipse(145.5,73,2,20)
   line(70,65,55,70)
   
   noFill();
-  strokeWeight(1)
+  strokeWeight(FlowerPetals)
   //Start
   beginShape();
   //Control Point
@@ -236,7 +238,7 @@ ellipse(145.5,73,2,20)
   line(36,64,55,70)
   
   noFill();
-  strokeWeight(1)
+  strokeWeight(FlowerPetals)
   //Start
   beginShape();
   //Control Point
@@ -254,7 +256,7 @@ ellipse(145.5,73,2,20)
   line(62,84,55,70)
   
   noFill();
-  strokeWeight(1)
+  strokeWeight(FlowerPetals)
   //Start
   beginShape();
   //Control Point
@@ -277,7 +279,7 @@ ellipse(145.5,73,2,20)
   line(71,45,100,50)
   
   noFill();
-  strokeWeight(1)
+  strokeWeight(FlowerPetals)
   //Start
   beginShape();
   //Control Point
@@ -298,7 +300,7 @@ ellipse(145.5,73,2,20)
   line(92,21,100,50)
   
   noFill();
-  strokeWeight(1);
+  strokeWeight(FlowerPetals);
   //Start
   beginShape();
   //Control Point
@@ -322,7 +324,7 @@ ellipse(145.5,73,2,20)
   
   
   noFill();
-  strokeWeight(1);
+  strokeWeight(FlowerPetals);
   line(100,50,128,35)
   //Start
   beginShape();
@@ -343,7 +345,7 @@ ellipse(145.5,73,2,20)
   line(100,50,110,70)
   
   noFill();
-  strokeWeight(1);
+  strokeWeight(FlowerPetals);
   //Start
   beginShape();
   //Control Point
@@ -364,7 +366,7 @@ ellipse(145.5,73,2,20)
   line(80,66,100,50)
   
   noFill();
-  strokeWeight(1);
+  strokeWeight(FlowerPetals);
   //Start
   beginShape();
   //Control Point
@@ -384,7 +386,7 @@ ellipse(145.5,73,2,20)
   line(110,140,115,126)
   
   noFill();
-  strokeWeight(1);
+  strokeWeight(FlowerPetals);
   //Start
   beginShape();
   //Control Point
@@ -403,7 +405,7 @@ ellipse(145.5,73,2,20)
   line(110,140,103,129)
   
   noFill();
-  strokeWeight(1);
+  strokeWeight(FlowerPetals);
   //Start
   beginShape();
   //Control Point
@@ -422,7 +424,7 @@ ellipse(145.5,73,2,20)
   line(110,140,126,133)
   
   noFill();
-  strokeWeight(1);
+  strokeWeight(FlowerPetals);
   //Start
   beginShape();
   //Control Point
@@ -442,7 +444,7 @@ ellipse(145.5,73,2,20)
   line(110,140,123,144)
   
   noFill();
-  strokeWeight(1);
+  strokeWeight(FlowerPetals);
   //Start
   beginShape();
   //Control Point
@@ -462,7 +464,7 @@ function Leaf(Leafside, x, y){
   if (Leafside ==1){
      //Leaf One Top Left
     noFill();
-    strokeWeight(1);
+    strokeWeight(LeafThick);
     //Start
     beginShape();
     //Control Point
@@ -476,7 +478,7 @@ function Leaf(Leafside, x, y){
     //End
     endShape();
     noFill();
-strokeWeight(1);
+strokeWeight(LeafThick);
 //Start
 beginShape();
 //Control Point
@@ -492,12 +494,11 @@ curveVertex(73,82)
 //End
 endShape();
 
-
   }
 else{
   //Leaf Two Top Right
   noFill();
-  strokeWeight(1);
+  strokeWeight(LeafThick);
   //Start
   beginShape();
   //Control Point
@@ -512,7 +513,7 @@ else{
   endShape();
   
   noFill();
-  strokeWeight(1);
+  strokeWeight(LeafThick);
   //Start
   beginShape();
   //Control Point
