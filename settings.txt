@@ -10,13 +10,14 @@ Your final settings.txt will look something like this when you are finished:
 Wallpaper 1:
 
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+let CircleOutline = 0
+let FlowerGone = 1//(1) 0 to remove
+let FlowerStem = 1 //1
+let FlowerPetals = 1.4 //1.4
+let LeafThick = 1 //1
+Leaf(1, 0, 0)
+Leaf(2, 0, 0)
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -26,7 +27,7 @@ function setup_wallpaper(pWallpaper) {
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 100;
   pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
 
 /////////////////////////////////
@@ -34,13 +35,16 @@ function setup_wallpaper(pWallpaper) {
 Wallpaper 2:
 
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+let rect_width  = 20;
+let rect_height = 20;
+let CircleOutline = 0
+let FlowerGone = 0//(1) 0 to remove
+let FlowerStem = 1 //1
+let FlowerPetals = 1.4 //1.4
+let LeafThick = 1 //1
+Leaf(1, 0, 0)
+Leaf(2, 0, 0)
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -51,4 +55,98 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_width  = 100;
   pWallpaper.grid_settings.cell_height = 100;
   pWallpaper.grid_settings.row_offset  = 0;
+}
+
+Wallpaper 3
+
+//your parameter variables go here!
+let rect_width  = 10;
+let rect_height = 10;
+let CircleOutline = 0
+let FlowerGone = 2//(1) 0 to remove
+let FlowerStem = 0.2 //1
+let FlowerPetals = 0.2 //1.4
+let LeafThick = 0.2 //1
+Leaf(1, 0, 0)
+Leaf(2, 0, 0)
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 0;
+}
+
+Wallpaper 4
+
+let rect_width  = 20;
+let rect_height = 20;
+let CircleOutline = 1
+let FlowerGone = -1//(1) 0 to remove
+let FlowerStem = 1 //1
+let FlowerPetals = 1 //1.4
+let LeafThick = 1 //1
+Leaf(1, 0, 0)
+Leaf(2, 0, 0)
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+Wallpaper 5
+
+et rect_width  = 20;
+let rect_height = 20;
+let CircleOutline = 0.3
+let FlowerGone = 0.7//(1) 0 to remove
+let FlowerStem =1.5//1
+let FlowerPetals = 1.5 //1.4
+let LeafThick = 1.5 //1
+Leaf(1, 0, 0)
+Leaf(2, 0, 0)
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+Wallpaper 6
+let rect_width  = 20;
+let rect_height = 20;
+let CircleOutline = 0
+let FlowerGone = 1//(1) 0 to remove
+let FlowerStem =1//1
+let FlowerPetals = 1//1.4
+let LeafThick = 1 //1
+Leaf(2, 0, 0)
+
+Leaf(2, 0, 0)
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 100;
+  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
